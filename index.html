@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueRep | Coming Soon</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="main">
+        <div id='content'>
+          <div class='title'>
+            <span>TRUE REP</span>
+          </div>
+          <p>COMING SOON!</p>
+          <section>
+            <ul id="countdown">
+              <li><span id="days" class="days timenumbers">01</span>
+                <p class="timeRefDays timedescription">days</p>
+              </li>
+              <li><span id="hours" class="hours timenumbers">00</span>
+                <p class="timeRefHours timedescription">hours</p>
+              </li>
+              <li><span id="minutes" class="minutes timenumbers">00</span>
+                <p class="timeRefMinutes timedescription">minutes</p>
+              </li>
+              <li><span id="seconds" class="seconds timenumbers yellow-text">00</span>
+                <p class="timeRefSeconds timedescription">seconds</p>
+              </li>
+            </ul>
+          </section>
+          <p>OUR SITE IS CURRENTLY ON MAINTANENCE.</br></br>WE'LL BE BACK WITH OUR NEW DESIGNED WEBSITE SOON!</a></p>
+        </div>
+      </div>
+
+      <script>
+        let comingDate = new Date('Sep 4, 2022 13:12:00')
+
+let d = document.getElementById('days')
+let h = document.getElementById('hours')
+let m = document.getElementById('minutes')
+let s = document.getElementById('seconds')
+
+let x = setInterval(function() {
+  let now = new Date()
+  let selisih = comingDate.getTime() - now.getTime()
+
+  let days    = Math.floor(selisih / (1000 * 60 * 60 * 24))
+  let hours   = Math.floor(selisih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+  let minutes = Math.floor(selisih % (1000 * 60 * 60) / (1000 * 60))
+  let seconds = Math.floor(selisih % (1000 * 60) / 1000)
+
+  d.innerHTML = getTrueNumber(days)
+  h.innerHTML = getTrueNumber(hours)
+  m.innerHTML = getTrueNumber(minutes)
+  s.innerHTML = getTrueNumber(seconds)
+
+  if (selisih < 0) {
+    clearInterval(x)
+    d.innerHTML = '00'
+    h.innerHTML = '00'
+    m.innerHTML = '00'
+    s.innerHTML = '00'
+  }
+}, 1000)
+
+function getTrueNumber(x) {
+  if (x < 10) return '0' + x
+  else return x
+}
+      </script>
+
+</body>
+</html>
