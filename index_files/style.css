@@ -15426,3 +15426,13 @@ body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.tech-images img {
+  height: 50px;
+  filter: contrast(0.9)!important;
+  opacity: 1!important;
+}
+
+.service-wrapper ul {
+  list-style: none;
+}
