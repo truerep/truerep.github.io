@@ -15425,6 +15425,7 @@ body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 
 .tech-images img {
@@ -15435,4 +15436,5 @@ body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn
 
 .service-wrapper ul {
   list-style: none;
+  padding: 0;
 }
