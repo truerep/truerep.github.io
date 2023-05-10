@@ -14661,17 +14661,18 @@ iframe {
   justify-content: center;
 }
 .slider-style-8 .inner .title {
-  font-size: 100px;
-  line-height: 1.1;
+  font-size: 60px;
+  line-height: 1.4;
+  padding-top: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-style-8 .inner .title {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 @media only screen and (max-width: 767px) {
   .slider-style-8 .inner .title {
-    font-size: 46px;
+    font-size: 32px;
   }
 }
 .slider-style-8 .inner .description {
